@@ -1,17 +1,39 @@
-
-
-<nav>
-    <li *ngFor="let item of menuItems">
-        <a [attr.id]="item.id">{{ item.name }}</a>
-        <!-- <ul *ngIf="item.subnav.length > 0">
+<!-- <ng-container *ngFor="let item of menuItems">
+    <div class="" ngbDropdown container="body" *ngIf="item?.subnav && item?.subnav.length > 0">
+        <button ngbDropdownToggle>{{ item.name }}</button>
+        <ul ngbDropdownMenu>
             <li *ngFor="let subItem of item.subnav">
-            <a [attr.id]="subItem.id">{{ subItem.name }}</a>
-            <ul *ngIf="subItem.subchildren && subItem.subchildren.length > 0">
-                <li *ngFor="let child of subItem.subchildren">
-                <a [attr.id]="child.id">{{ child.name }}</a>
-                </li>
-            </ul>
+                <h1>{{subItem.name}}</h1>
+                <ul *ngFor="let child of subItem.subchildren">
+                    <li ngbDropdownItem (click)="navigateToChild(child.path)">{{ child.name }}</li>
+                </ul>
             </li>
-        </ul> -->
-    </li>
-</nav>
+        </ul>
+    </div>
+    <a ngbDropdownItem (click)="navigateToChild(item.path)">{{ item.name }}</a>
+</ng-container> -->
+
+
+
+<div class="d-flex align-items-center gap-3">
+    <ng-container *ngFor="let item of menuItems">
+        <ng-template [ngTemplateOutlet]="dropdownTemplate" [ngTemplateOutletContext]="{item: item}"></ng-template>
+    </ng-container>
+</div>
+
+
+
+<ng-template #dropdownTemplate let-item="item">
+    <div ngbDropdown container="body" *ngIf="item?.subnav && item?.subnav.length > 0">
+        <button ngbDropdownToggle>{{ item.name }}</button>
+        <ul ngbDropdownMenu>
+            <li *ngFor="let subItem of item.subnav">
+                <h1>{{subItem.name}}</h1>
+                <ul *ngFor="let child of subItem.subchildren">
+                    <li ngbDropdownItem (click)="navigateToChild(child.path)">{{ child.name }}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <a ngbDropdownItem (click)="navigateToChild(item.path)">{{ item.name }}</a>
+</ng-template>

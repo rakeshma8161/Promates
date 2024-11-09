@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavigationComponent } from "../navigation/navigation.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +10,5 @@ import { NavigationComponent } from "../navigation/navigation.component";
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+ 
 }
