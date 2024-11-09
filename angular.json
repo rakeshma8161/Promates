@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "promotes": {
+    "promates": {
       "projectType": "application",
       "i18n": {
       },
@@ -19,7 +19,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/promotes",
+            "outputPath": "dist/promates",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "localize": true,
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "promotes:build:production"
+              "buildTarget": "promates:build:production"
             },
             "development": {
-              "buildTarget": "promotes:build:development"
+              "buildTarget": "promates:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "promotes:build",
+            "buildTarget": "promates:build",
             "outputPath": "src/locale",
             "format": "xlf"
           }
