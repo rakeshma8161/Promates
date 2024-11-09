@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pramotes": {
+    "promotes": {
       "projectType": "application",
       "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "fr": "src/locale/messages.fr.xlf"
-        }
       },
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +19,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/pramotes",
+            "outputPath": "dist/promotes",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "localize": true,
@@ -47,7 +43,6 @@
           },
           "configurations": {
             "production": {
-              "localize": ["fr"],
               "budgets": [
                 {
                   "type": "initial",
@@ -74,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "pramotes:build:production"
+              "buildTarget": "promotes:build:production"
             },
             "development": {
-              "buildTarget": "pramotes:build:development"
+              "buildTarget": "promotes:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "pramotes:build",
+            "buildTarget": "promotes:build",
             "outputPath": "src/locale",
             "format": "xlf"
           }
