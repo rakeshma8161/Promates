@@ -1,0 +1,17 @@
+
+
+<nav>
+    <li *ngFor="let item of menuItems">
+        <a [attr.id]="item.id">{{ item.name }}</a>
+        <!-- <ul *ngIf="item.subnav.length > 0">
+            <li *ngFor="let subItem of item.subnav">
+            <a [attr.id]="subItem.id">{{ subItem.name }}</a>
+            <ul *ngIf="subItem.subchildren && subItem.subchildren.length > 0">
+                <li *ngFor="let child of subItem.subchildren">
+                <a [attr.id]="child.id">{{ child.name }}</a>
+                </li>
+            </ul>
+            </li>
+        </ul> -->
+    </li>
+</nav>
