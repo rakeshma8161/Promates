@@ -2,7 +2,7 @@ import { APP_PATHS } from './app.constants'; // Import the paths
 
 export const MENU_DATA = [
   {
-    name: 'About',
+    name: 'About Us',
     icon: '',
     id: 'about',
     subnav: [],
@@ -13,6 +13,24 @@ export const MENU_DATA = [
     icon: '',
     id: 'forbusiness',
     subnav: [
+      {
+        name: 'Services',
+        id: 'services', // Add an id for the subnav
+        icon: '',
+        subchildren:[
+          {
+            name: 'Staffing',
+            id: 'staffing',
+            icon: '',
+            path: APP_PATHS.STAFFING
+          },
+          {
+            name: 'Consulting',
+            id: 'consulting',
+            icon: '',
+          }
+        ]
+      },
       {
         name: 'Industries',
         id: 'industries', // Add an id for the subnav
@@ -56,77 +74,88 @@ export const MENU_DATA = [
           },
         ],
       },
-      {
-        name: 'Staffing',
-        id: '',
-        icon: '',
-        subchildren: [
-          {
-            name: 'Contract',
-            icon: '',
-            id: '',
-            path: APP_PATHS.STAFFING.CONTRACT
-          },
-          {
-            name: 'Contract To Hire',
-            icon: '',
-            id: '',
-            path: APP_PATHS.STAFFING.CONTRACT_TO_HIRE
-          },
-          {
-            name: 'Direct Placement',
-            icon: '',
-            id: '',
-            path: APP_PATHS.STAFFING.DIRECT_PLACEMENT
-          },
-          {
-            name: 'Offshore Resources',
-            icon: '',
-            id: '',
-            path: APP_PATHS.STAFFING.OFFSHORE_RESOURCES
-          },
-        ],
-      },
-      {
-        name: 'Consulting',
-        id: '',
-        icon: '',
-        subchildren: [
-          {
-            name: 'Cloud Services',
-            icon: '',
-            id: '',
-            path: APP_PATHS.CONSULTING.CLOUD_SERVICES
-          },
-          {
-            name: 'Engineering',
-            icon: '',
-            id: '',
-            path: APP_PATHS.CONSULTING.ENGINEERING
-          },
-          {
-            name: 'Support Consulting',
-            icon: '',
-            id: '',
-            path: APP_PATHS.CONSULTING.SUPPORT
-          },
-        ],
-      },
-    ],
+    //   {
+    //     name: 'Staffing',
+    //     id: 'staffing',
+    //     icon: '',
+    //     subchildren: [
+    //       {
+    //         name: 'Contract',
+    //         icon: '',
+    //         id: '',
+    //         path: APP_PATHS.STAFFING.CONTRACT
+    //       },
+    //       {
+    //         name: 'Contract To Hire',
+    //         icon: '',
+    //         id: '',
+    //         path: APP_PATHS.STAFFING.CONTRACT_TO_HIRE
+    //       },
+    //       {
+    //         name: 'Direct Placement',
+    //         icon: '',
+    //         id: '',
+    //         path: APP_PATHS.STAFFING.DIRECT_PLACEMENT
+    //       },
+    //       {
+    //         name: 'Offshore Resources',
+    //         icon: '',
+    //         id: '',
+    //         path: APP_PATHS.STAFFING.OFFSHORE_RESOURCES
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: 'Consulting',
+    //     id: 'consulting',
+    //     icon: '',
+    //     subchildren: [
+    //       {
+    //         name: 'Cloud Services',
+    //         icon: '',
+    //         id: '',
+    //         path: APP_PATHS.CONSULTING.CLOUD_SERVICES
+    //       },
+    //       {
+    //         name: 'Engineering',
+    //         icon: '',
+    //         id: '',
+    //         path: APP_PATHS.CONSULTING.ENGINEERING
+    //       },
+    //       {
+    //         name: 'Support Consulting',
+    //         icon: '',
+    //         id: '',
+    //         path: APP_PATHS.CONSULTING.SUPPORT
+    //       },
+    //     ],
+    //   },
+     ],
   },
+  // {
+  //   name: 'Insights',
+  //   icon: '',
+  //   id: 'insights',
+  //   subnav: [],
+  //   path: APP_PATHS.INSIGHTS // Use the path from APP_PATHS
+  // },
   {
-    name: 'Insights',
-    icon: '',
-    id: 'insights',
-    subnav: [],
-    path: APP_PATHS.INSIGHTS // Use the path from APP_PATHS
-  },
-  {
-    name: 'Job Seeker',
+    name: 'For Job Seekers',
     icon: '',
     id: 'jobseeker',
-    subnav: [],
-    path: APP_PATHS.JOB_SEEKER // Use the path from APP_PATHS
+    subnav: [
+      {
+        name: 'Search Jobs',
+        id: 'searchjobs', // Add an id for the subnav
+        icon: '',
+      },
+      {
+        name: 'Submit Resume',
+        id: 'submit Resume', // Add an id for the subnav
+        icon: '',
+      }
+    ],
+    // path: APP_PATHS.JOB_SEEKER // Use the path from APP_PATHS
   },
   {
     name: 'Contact',

@@ -13,5 +13,5 @@ export const routes: Routes = [
     { path: '', redirectTo: APP_PATHS.HOME, pathMatch: 'full' },
     { path: APP_PATHS.HOME, component: HomeComponent, canActivate: [] },
     // ...menuRoutes,
-    { path: APP_PATHS.INDUSTRIES.FINANCE, component:AboutusComponent},
+    { path: APP_PATHS.ABOUT, component:AboutusComponent},
 ];

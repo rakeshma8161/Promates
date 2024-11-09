@@ -28,4 +28,19 @@ export class NavigationComponent {
     this.menuItems = this.menuService.getMenuData();
   }
 
+  subItemSelection(tab:any,subItem?:any){
+     if(tab && tab?.subnav?.length){
+      if(!tab.selectedSubNav){
+        tab.selectedSubNav ={};
+      }
+      tab.selectedSubNav = {};
+      if(!subItem){
+        tab.selectedSubNav = tab.subnav[0];
+      }else if(subItem){
+        tab.selectedSubNav = subItem;
+      }
+     }
+  }
+
+
 }

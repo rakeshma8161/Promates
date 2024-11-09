@@ -10,5 +10,8 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
- 
+  public route = inject(Router);
+  navigateToHome(){
+    this.route.navigate(['home']); 
+  }
 }

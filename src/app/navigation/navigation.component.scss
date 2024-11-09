@@ -52,6 +52,10 @@
                 margin: 0;
             }
             h1{
+                &.active{
+                    color: #323232;
+                    background: #FFF;
+                }
                 color: #FFF;
                 font-size: 16px;
                 font-weight: 700;
@@ -64,10 +68,11 @@
                 gap: 10px;
                 align-self: stretch;
                 border-radius: 60px;
-                background: #FFF;
+                background: transparent;
                 flex-shrink: 0;
                 width: 200px;
-                color: #323232;
+                cursor: pointer;
+
             }
             .childrens-list{
                 width: 100%;
@@ -90,7 +95,7 @@
                     font-weight: 700;
                     line-height: normal;
                     cursor: pointer;
-                    max-width: 32%;
+                    // max-width: 32%;
                 }
             }
         }
