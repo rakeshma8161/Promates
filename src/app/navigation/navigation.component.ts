@@ -29,6 +29,8 @@ export class NavigationComponent {
   }
 
   subItemSelection(tab:any,subItem?:any){
+    this.menuItems.map((a:any)=>{ a.selected = false})
+    tab.selected = true;
      if(tab && tab?.subnav?.length){
       if(!tab.selectedSubNav){
         tab.selectedSubNav ={};

@@ -48,5 +48,5 @@
             </ng-container>
         </ul>
     </div>
-    <button class="nav-item-list" (click)="navigateToChild(item.path)" *ngIf="!item?.subnav.length">{{ item.name }}</button>
+    <button class="nav-item-list" (click)="navigateToChild(item.path);subItemSelection(item)" *ngIf="!item?.subnav.length" [ngClass]="{'selectedTab':item.selected}">{{ item.name }}</button>
 </ng-template>
